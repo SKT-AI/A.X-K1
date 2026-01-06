@@ -11,8 +11,8 @@ library_name: transformers
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
-            srcset="https://github.com/SKT-AI/A.X-K1/assets/A.X_K1_BI_Negative.png">
-    <img src="https://github.com/SKT-AI/A.X-K1/assets/A.X_K1_BI_Primary.png" alt="A.X Logo" width="300">
+            srcset="./assets/A.X_K1_BI_Negative.png">
+    <img src="./assets/A.X_K1_BI_Primary.png" alt="A.X Logo" width="300">
   </picture>
 </div>
 
@@ -128,12 +128,13 @@ During training, A.X K1 employs a multi-token prediction objective in which the 
 
 ### Transformers
 
-For users who wish to run direct inference with Hugging Face Transformers, we provide example scripts in the following repository: <https://github.com/SKT-AI/A.X-K1>
+For users who wish to run direct inference with Hugging Face Transformers, please refer to the example scripts and instructions in [this repository](./examples/transformers/README.md).
 
 ### vLLM
 
-Support for vLLM serving is currently under preparation.
-Validated configurations and example launch commands will be provided in an upcoming update, once upstream integration and benchmarking are finalized.
+We provide an initial **vLLM** integration for A.X K1 in the following repository:
+
+- <https://github.com/fort726/vllm/tree/add-ax-k1-model>
 
 ### SGLang
 
