@@ -1,0 +1,46 @@
+#!/bin/bash
+#SBATCH -J infer_axk1
+#SBATCH -N 4
+#SBATCH --ntasks-per-node=1
+#SBATCH --gpus-per-node=8
+#SBATCH -t 01:00:00
+#SBATCH -o %j.infer.out
+#SBATCH -e %j.infer.err
+
+set -euo pipefail
+
+# ===== 사용자 설정 =====
+export OMP_NUM_THREADS=1
+export VENV=<YOUR_VENV_PATH>
+
+MODEL_ID_OR_PATH="skt/A.X-K1"
+PROMPT="MoE에 대해서 설명해 주세요 "
+MAX_NEW_TOKENS=64
+
+# =======================
+
+source ${VENV}/bin/activate
+
+export NCCL_DEBUG=WARN
+export TORCH_NCCL_ASYNC_ERROR_HANDLING=1
+export PYTORCH_ALLOC_CONF=expandable_segments:True
+export TOKENIZERS_PARALLELISM=false
+
+MASTER_ADDR=$(scontrol show hostnames "$SLURM_NODELIST" | head -n 1)
+MASTER_PORT=$(shuf -i 20000-29999 -n 1)
+export MASTER_ADDR MASTER_PORT
+
+echo "MASTER_ADDR=$MASTER_ADDR MASTER_PORT=$MASTER_PORT"
+echo "Nodes: $(scontrol show hostnames "$SLURM_JOB_NODELIST" | tr '\n' ' ')"
+
+srun --label \
+  torchrun \
+  --nnodes=${SLURM_NNODES} \
+  --nproc_per_node=${SLURM_GPUS_PER_NODE} \
+  --rdzv_backend=c10d \
+  --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
+  infer.py \
+      --model ${MODEL_ID_OR_PATH} \
+      --prompt "${PROMPT}" \
+      --max_new_tokens ${MAX_NEW_TOKENS} \
+      --disable_kv_cache
