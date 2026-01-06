@@ -1,13 +1,3 @@
----
-license: apache-2.0
-language:
-  - en
-  - ko
-library_name: transformers
----
-
-# A.X K1
-
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)"
