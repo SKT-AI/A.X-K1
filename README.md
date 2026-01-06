@@ -5,7 +5,7 @@
     <img src="./assets/A.X_K1_BI_Primary.png" alt="A.X Logo" width="300">
   </picture>
 </div>
-
+<br/>
 <p align="center">
   <a href="https://huggingface.co/skt/A.X-K1">🤗 Models</a> |
   <a href="https://github.com/SKT-AI/A.X-K1">🖥️ Github</a> |
@@ -83,7 +83,7 @@ During training, A.X K1 employs a multi-token prediction objective in which the 
 
 | Domain | Benchmark | Lang. | A.X K1 (519B-A33B) | DeepSeek-V3.1 (685B-A37B) | GLM-4.6 (357B-A32B) |
 | --- | --- | --- | ---: | ---: | ---: |
-| Korean Knowledge | KMMLU | Korean | 80.2 | 76.5 | 79.9 |
+| Knowledge | KMMLU | Korean | 80.2 | 76.5 | 79.9 |
 | | KMMLU-Redux | Korean | 77.9 | 75.9 | 78.2 |
 | | KMMLU-Pro | Korean | 68.1 | 71.4 | 71.8 |
 | | CLIcK | Korean | 84.9 | 84.5 | 84.9 |
