@@ -6,6 +6,12 @@
   </picture>
 </div>
 
+<p align="center">
+  <a href="https://huggingface.co/skt/A.X-K1">🤗 Models</a> |
+  <a href="https://github.com/SKT-AI/A.X-K1">🖥️ Github</a> |
+  <a href="https://github.com/SKT-AI/A.X-K1/releases/download/v1.0/A_X_Tech_Report.pdf">📄 Technical Report</a>
+</p>
+
 ## Model Summary
 
 **A.X K1** is a large-scale Mixture-of-Experts (MoE) language model designed for efficient high-capacity reasoning and instruction following, and was trained from scratch without initializing from an existing pretrained model.
@@ -82,9 +88,9 @@ During training, A.X K1 employs a multi-token prediction objective in which the 
 | | KMMLU-Pro | Korean | 68.1 | 71.4 | 71.8 |
 | | CLIcK | Korean | 84.9 | 84.5 | 84.9 |
 | | KoBALT | Korean | 48.8 | 59.7 | 59.2 |
-| English Knowledge | MMLU-Pro | English | 81.5 | 85.1 | 82.9 |
+| | MMLU-Pro | English | 81.5 | 85.1 | 82.9 |
 | | GPQA-Diamond | English | 74.0 | 77.9 | 78.0 |
-| Instruction Following | IFBench | English | 64.7 | 41.5 | 43.4 |
+| Instruction Following | IFBench (prompt-loose) | English | 64.7 | 41.5 | 43.4 |
 | | IFEval (prompt-strict) | English | 80.4 | 84.4 | 86.1 |
 | | IFEval-ko (prompt-strict) | Korean | 81.0 | 79.2 | 85.8 |
 | Math | AIME25 | English | 89.8 | 88.4 | 86.0 |
@@ -104,12 +110,12 @@ During training, A.X K1 employs a multi-token prediction objective in which the 
 
 | Domain | Benchmark | A.X K1 (519B-A33B) | DeepSeek-V3.1 (685B-A37B) | GLM-4.6 (357B-A32B) |
 | --- | --- | ---: | ---: | ---: |
-| Instruction Following | IFBench | 44.3 | 37.8 | 36.7 |
-| | IFEval | 78.6 | 82.7 | 87.2 |
 | Knowledge | KMMLU | 73.0 | 78.7 | 77.7 |
 | | KMMLU-Redux | 68.3 | 75.9 | 73.4 |
 | | KMMLU-Pro | 60.3 | 67.9 | 68.2 |
 | | CLIcK | 77.2 | 80.9 | 77.9 |
+| Instruction Following | IFBench | 44.3 | 37.8 | 36.7 |
+| | IFEval | 78.6 | 82.7 | 87.2 |
 | Code | HumanEval+ | 79.9 | 87.8 | 89.0 |
 | | HumanEval+ ko | 75.6 | 86.6 | 92.1 |
 | | MBPP+ | 85.7 | 92.6 | 94.2 |
@@ -183,6 +189,7 @@ If you use A.X K1 in your research, please cite the technical report:
   institution = {SK Telecom},
   year        = {2025},
   month       = {January},
-  note        = {Technical report, to appear}
+  note        = {Technical report}
+  url         = {https://github.com/SKT-AI/A.X-K1/releases/download/v1.0/A_X_Tech_Report.pdf}
 }
 ```
