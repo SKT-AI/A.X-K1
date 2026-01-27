@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://huggingface.co/skt/A.X-K1">🤗 Models</a> |
   <a href="https://github.com/SKT-AI/A.X-K1">🖥️ Github</a> |
-  <a href="https://github.com/SKT-AI/A.X-K1/releases/download/v1.1/A_X_Tech_Report.pdf">📄 Technical Report</a>
+  <a href="https://github.com/SKT-AI/A.X-K1/blob/main/A_X_Tech_Report.pdf">📄 Technical Report</a>
 </p>
 
 ## Model Summary
