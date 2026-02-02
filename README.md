@@ -103,7 +103,7 @@ During training, A.X K1 employs a multi-token prediction objective in which the 
 | | MBPP+ | English | 93.0 | 99.2 | 98.9 |
 | | SciCode | English | 32.4 | 39.1 | 38.4 |
 | Long Context | AA-LCR | English | 36.0 | 53.3 | 54.3 |
-| | Humanity’s Last Exam | English | 7.2 | 13.0 | 13.3 |
+| | Humanity’s Last Exam | English | 8.6 | 13.0 | 13.3 |
 | Agent | τ² Telecom | English | 58.1 | 37.4 | 70.5 |
 
 ### Non-Thinking Mode
