@@ -94,8 +94,9 @@ During training, A.X K1 employs a multi-token prediction objective in which the 
 | | IFEval (prompt-strict) | English | 80.4 | 84.4 | 86.1 |
 | | IFEval-ko (prompt-strict) | Korean | 81.0 | 79.2 | 85.8 |
 | Math | AIME25 | English | 89.8 | 88.4 | 86.0 |
-| | AIME25-ko | Korean | 80.4 | 81.3 | 80.4 |
-| | HRM8K | Korean | 84.3 | 84.3 | 83.9 |
+| | AIME25-ko | Korean | 86.9 | 78.1 | 75.9 |
+| | HRM8K | Korean | 89.4 | 84.3 | 83.9 |
+| | KMO25 | Korean | 93.0 | 86.4 | 96.6 |
 | Code | LiveCodeBench v6 (25.2.1–25.5.1) | English | 75.8 | 69.5 | 76.0 |
 | | LiveCodeBench-ko | Korean | 73.1 | 66.2 | 55.9 |
 | | HumanEval+ | English | 87.2 | 86.0 | 83.5 |
@@ -183,13 +184,13 @@ python -m sglang.launch_server \
 If you use A.X K1 in your research, please cite the technical report:
 
 ```bibtex
-@techreport{axk1,
-  title       = {A.X K1 Technical Report},
-  author      = {{SK Telecom}},
-  institution = {SK Telecom},
-  year        = {2025},
-  month       = {January},
-  note        = {Technical report}
-  url         = {https://github.com/SKT-AI/A.X-K1/releases/download/v1.0/A_X_Tech_Report.pdf}
+@misc{cheon2026axk1technicalreport,
+      title={A.X K1 Technical Report}, 
+      author={Sung Jun Cheon and Jaekyung Cho and Seongho Choi and Hyunjun Eun and Seokhwan Jo and Jaehyun Jun and Minsoo Kang and Jin Kim and Jiwon Kim and Minsang Kim and Sungwan Kim and Seungsik Kim and Tae Yoon Kim and Youngrang Kim and Hyeongmun Lee and Sangyeol Lee and Sungeun Lee and Youngsoon Lee and Yujin Lee and Seongmin Ok and Chanyong Park and Hyewoong Park and Junyoung Park and Hyunho Yang and Subin Yi and Soohyun Bae and Dhammiko Arya and Yongseok Choi and Sangho Choi and Dongyeon Cho and Seungmo Cho and Gyoungeun Han and Yong-jin Han and Seokyoung Hong and Hyeon Hwang and Wonbeom Jang and Minjeong Ju and Wonjin Jung and Keummin Ka and Sungil Kang and Dongnam Kim and Joonghoon Kim and Jonghwi Kim and SaeRom Kim and Sangjin Kim and Seongwon Kim and Youngjin Kim and Seojin Lee and Sunwoo Lee and Taehoon Lee and Chanwoo Park and Sohee Park and Sooyeon Park and Yohan Ra and Sereimony Sek and Seungyeon Seo and Gun Song and Sanghoon Woo and Janghan Yoon and Sungbin Yoon},
+      year={2026},
+      eprint={2601.09200},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2601.09200}, 
 }
 ```
